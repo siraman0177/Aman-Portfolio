@@ -1,0 +1,77 @@
+[
+  {
+    "category": "Programming",
+    "items": [
+      "Python",
+      "SQL",
+      "C/C++"
+    ]
+  },
+  {
+    "category": "AI / ML",
+    "items": [
+      "Machine Learning",
+      "Deep Learning",
+      "Transformer Architecture",
+      "PyTorch",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Matplotlib"
+    ]
+  },
+  {
+    "category": "Generative & Agentic AI",
+    "items": [
+      "LLMs",
+      "RAG",
+      "AI Agents",
+      "Multi-Agent Systems",
+      "Agent Orchestration",
+      "Prompt Engineering",
+      "LangChain",
+      "LangGraph",
+      "Hugging Face",
+      "Ollama",
+      "MCP"
+    ]
+  },
+  {
+    "category": "NLP",
+    "items": [
+      "Embeddings",
+      "Tokenization",
+      "Text Classification",
+      "Information Retrieval"
+    ]
+  },
+  {
+    "category": "Backend & APIs",
+    "items": [
+      "FastAPI",
+      "Pydantic",
+      "REST APIs",
+      "JWT",
+      "OAuth2"
+    ]
+  },
+  {
+    "category": "Databases",
+    "items": [
+      "PostgreSQL",
+      "MySQL",
+      "Qdrant",
+      "ChromaDB"
+    ]
+  },
+  {
+    "category": "Tools",
+    "items": [
+      "Git",
+      "GitHub",
+      "Jupyter Notebook",
+      "Google Colab",
+      "VS Code"
+    ]
+  }
+]

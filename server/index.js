@@ -1,0 +1,17 @@
+import "dotenv/config";
+import express from "express";
+import cors from "cors";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import apiRouter from "./routes/index.js";
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const app = express();
+const PORT = Number.parseInt(process.env.PORT || "5001", 10);
+app.disable("x-powered-by");
+app.use(cors());
+app.use(express.json({limit:"20kb"}));
+app.get("/api/health",(_req,res)=>res.json({status:"ok"}));
+app.use("/api",apiRouter);
+app.use("/api",(_req,res)=>res.status(404).json({error:"API endpoint not found."}));
+app.use((err,_req,res,_next)=>{const status=Number.isInteger(err.status)?err.status:500;if(status>=500)console.error(err);res.status(status).json({error:status>=500?"An unexpected server error occurred.":err.message});});
+app.listen(PORT,()=>console.log(`Portfolio API listening on http://localhost:${PORT}`));

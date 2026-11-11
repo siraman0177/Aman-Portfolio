@@ -1,0 +1,3 @@
+import {FiMail,FiGithub,FiLinkedin,FiArrowUpRight} from "react-icons/fi";
+import {profile} from "../data.js";
+export default function Contact(){return <div className="wrap page contact-page"><p className="eyebrow">03 / CONTACT</p><h1 className="page-title">Let’s connect.</h1><p className="page-intro">I’m interested in AI/ML, Generative AI and backend engineering opportunities.</p><div className="contact-list"><a href={`mailto:${profile.email}`}><span><FiMail/> {profile.email}</span><FiArrowUpRight/></a><a href={profile.github} target="_blank" rel="noreferrer"><span><FiGithub/> GitHub</span><FiArrowUpRight/></a><a href={profile.linkedin} target="_blank" rel="noreferrer"><span><FiLinkedin/> LinkedIn</span><FiArrowUpRight/></a></div></div>}

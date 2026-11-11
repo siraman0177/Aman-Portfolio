@@ -1,0 +1,42 @@
+[
+  {
+    "id": "adaptive-learning-engine",
+    "title": "AI-Native Adaptive Learning Engine",
+    "date": "2026",
+    "description": "Designed an adaptive exam-preparation engine using syllabus/PYQ analysis and learner state from mock performance, doubts and interaction history. Built a multi-agent orchestrator for exam analysis, strategy generation/refinement, mock generation and context-aware QA. Added targeted RAG for study content and learning memory, PostgreSQL for learner state, and MCP-based controlled access. Feedback from mocks and recurring misconceptions reprioritizes the learner’s study strategy.",
+    "stack": [
+      "Python",
+      "FastAPI",
+      "LLMs",
+      "RAG",
+      "PostgreSQL",
+      "Qdrant",
+      "MCP"
+    ]
+  },
+  {
+    "id": "ragify-india",
+    "title": "RAGify India — Legal AI Research System",
+    "date": "April 2025",
+    "description": "Developed a RAG-based legal question-answering system using Mistral-7B, LLaMA, LangChain, FAISS and semantic search across 50+ Indian legal acts. Built document preprocessing, chunking, embedding generation and FAISS indexing. Constructed a benchmark dataset of 500+ legal queries for retrieval benchmarking, model evaluation and generation quality analysis.",
+    "stack": [
+      "Python",
+      "LangChain",
+      "Mistral-7B",
+      "FAISS",
+      "Hugging Face"
+    ]
+  },
+  {
+    "id": "ai-trip-planner",
+    "title": "AI Trip Planner",
+    "date": "November 2025 · Team project",
+    "description": "Developed a multi-agent AI trip-planning system with Research, Optimization and Recommendation agents. Designed a weighted optimization algorithm combining cost, travel time, ratings and user preferences to generate personalized, constraint-aware itineraries. Added context-aware personalization using travel season, regional preferences and destination metadata.",
+    "stack": [
+      "Python",
+      "LangChain",
+      "Multi-Agent LLMs",
+      "OOP"
+    ]
+  }
+]
