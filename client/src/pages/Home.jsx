@@ -3,6 +3,8 @@ import { FiArrowDown,FiArrowUpRight,FiGithub,FiLinkedin,FiMail,FiFileText } from
 import { profile,projects,technologies } from "../data.js";
 import ProjectCard from "../components/ProjectCard.jsx";
 import TechGrid from "../components/TechGrid.jsx";
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function Home(){
  return <div className="wrap">
   <section className="hero">
@@ -11,7 +13,9 @@ export default function Home(){
     <h1>{profile.headline.split("\n").map((s,i)=><span key={i}>{s} </span>)}</h1>
     <p className="intro">{profile.intro}</p>
     <div className="actions">
-     <a className="button button-primary" href="/api/resume/view" target="_blank" rel="noreferrer"><FiFileText/> View resume <FiArrowUpRight/></a>
+
+     <a className="button button-primary" href={`${API_URL}/api/resume/view`} target="_blank" rel="noreferrer"><FiFileText/> View resume <FiArrowUpRight/></a>
+     
      <a className="button" href={profile.github} target="_blank" rel="noreferrer"><FiGithub/> GitHub <FiArrowUpRight/></a>
      <a className="button" href={profile.linkedin} target="_blank" rel="noreferrer"><FiLinkedin/> LinkedIn <FiArrowUpRight/></a>
      <a className="button button-icon" href={`mailto:${profile.email}`} aria-label="Email Aman"><FiMail/> Email</a>

@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import NotFound from "./pages/NotFound.jsx";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Navigation() {
   const [open, setOpen] = useState(false);
@@ -14,9 +15,9 @@ function Navigation() {
   return <header className="topbar"><nav className="nav">
     <Link to="/" className="brand">ASP<span>.</span></Link>
     <div className="nav-links">{links.map(([to,label]) => <NavLink key={to} to={to} end={to==="/"}>{label}</NavLink>)}</div>
-    <a className="nav-cta" href="/api/resume/view" target="_blank" rel="noreferrer">Resume <FiArrowUpRight /></a>
+    <a className="nav-cta" href={`${API_URL}/api/resume/view`} target="_blank" rel="noreferrer">Resume <FiArrowUpRight /></a>
     <button className="menu-toggle" onClick={()=>setOpen(!open)} aria-label="Toggle navigation">{open?<FiX/>:<FiMenu/>}</button>
-    {open && <div className="mobile-menu">{links.map(([to,label])=><NavLink key={to} to={to} end={to==="/"}>{label}</NavLink>)}<a href="/api/resume/view" target="_blank" rel="noreferrer">View resume</a></div>}
+    {open && <div className="mobile-menu">{links.map(([to,label])=><NavLink key={to} to={to} end={to==="/"}>{label}</NavLink>)}<a href={`${API_URL}/api/resume/view`} target="_blank" rel="noreferrer">View resume</a></div>}
   </nav></header>;
 }
 export default function App() {
